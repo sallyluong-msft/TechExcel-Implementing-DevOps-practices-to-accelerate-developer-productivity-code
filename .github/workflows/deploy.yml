@@ -49,4 +49,4 @@
           resourceGroupName: DevProductivityWorkshop
           template: ./InfrastructureAsCode/main.bicep
           # Use the environment variable called targetEnv
-          parameters: environment=$
+          parameters: environment=targetEnv
