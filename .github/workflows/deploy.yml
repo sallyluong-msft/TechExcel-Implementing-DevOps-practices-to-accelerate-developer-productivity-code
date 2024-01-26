@@ -1,8 +1,4 @@
 
-  permissions:
-    id-token: write
-    contents: read
-  
   # We only want to run this script manually.
   on:
     workflow_dispatch
