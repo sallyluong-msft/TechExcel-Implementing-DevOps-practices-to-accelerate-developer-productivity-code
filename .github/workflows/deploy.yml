@@ -26,17 +26,7 @@
       # makes it available to the GitHub hosted runner. It will usually be the
       # first task for any workflow
       - uses: actions/checkout@main
-  on: 
-  workflow_dispatch:
-    inputs:
-      appenv:
-        type: choice
-        description: Choose the target environment
-        default: dev
-        options: 
-          - dev
-          - test
-          - prod
+      
 
         # Log into Azure using a federated credential. We have already set up the
         # federation process in a prior step, so we need to pass in the following:
