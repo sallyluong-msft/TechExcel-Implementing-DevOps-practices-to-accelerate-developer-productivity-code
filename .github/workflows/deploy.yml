@@ -23,14 +23,14 @@ jobs:
       - uses: actions/checkout@main
       - uses: azure/login@v1
         with:
-          client-id: ${{ secrets.AZURE_CLIENT_ID }}
-          tenant-id: ${{ secrets.TENANT_ID }}
-          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          client-id: 5dd2cbbc-474c-43f4-adf0-2d510a8da283
+          tenant-id: 6988ef53-709f-417d-bde1-e21c24244485
+          subscription-id: ad582931-4bbe-4158-b97f-5c70027069be
           enable-AzPSSession: true
       - name: Run Bicep deploy
         uses: azure/arm-deploy@v1
         with:
-          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
-          resourceGroupName: ${{ secrets.AZURE_RG }}
+          subscriptionId: ad582931-4bbe-4158-b97f-5c70027069be
+          resourceGroupName: DevProductivityWorkshop
           template: ./InfrastructureAsCode/main.bicep
-          parameters: environment=${{ github.event.inputs.appenv }}
+          parameters: environment= dev
