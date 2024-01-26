@@ -9,6 +9,9 @@
   env:
     targetEnv: dev
 
+  permissions:
+    id-token: write
+
   # The overall workflow name will be Azure Bicep. This will show up in the
   # GitHub Action page.
   name: Azure Bicep
@@ -49,4 +52,4 @@
           resourceGroupName: DevProductivityWorkshop
           template: ./InfrastructureAsCode/main.bicep
           # Use the environment variable called targetEnv
-          parameters: environment=targetEnv
+          parameters: environment=dev
